@@ -4,8 +4,8 @@ using System.Data.Entity;
 
 namespace MvcMovie.Models
 {
-public class Movie
-{
+  public class Movie
+  {
     public int ID { get; set; }
 
     [StringLength(60, MinimumLength = 3)]
@@ -28,10 +28,15 @@ public class Movie
     [RegularExpression(@"^[A-Z]+[a-zA-Z''-'\s]*$")]
     [StringLength(5)]
     public string Rating { get; set; }
-}
+  }
 
-    public class MovieDBContext : DbContext
+  public class MovieDBContext : DbContext
+  {
+    public MovieDBContext()
     {
-        public DbSet<Movie> Movies { get; set; }
+      Database.SetInitializer<MovieDBContext>(new MigrateDatabaseToLatestVersion<MovieDBContext,
+      MvcMovie.Migrations.Configuration>());
     }
+    public DbSet<Movie> Movies { get; set; }
+  }
 }
