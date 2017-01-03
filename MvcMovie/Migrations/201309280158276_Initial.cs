@@ -1,4 +1,4 @@
-namespace MvcMovie.Migrations
+namespace SmacoWorld.Sample.BalanceSheet.Migrations
 {
     using System;
     using System.Data.Entity.Migrations;

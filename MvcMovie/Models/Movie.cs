@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.Data.Entity;
 
-namespace MvcMovie.Models
+namespace SmacoWorld.Sample.BalanceSheet.Models
 {
     public class Movie
     {
@@ -36,7 +36,7 @@ namespace MvcMovie.Models
         {
             Database.SetInitializer<MovieDBContext>
                 (new MigrateDatabaseToLatestVersion<MovieDBContext,
-                    MvcMovie.Migrations.Configuration>());
+                    SmacoWorld.Sample.BalanceSheet.Migrations.Configuration>());
         }
         public DbSet<Movie> Movies { get; set; }
     }

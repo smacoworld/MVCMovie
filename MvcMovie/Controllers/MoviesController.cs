@@ -6,9 +6,9 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
-using MvcMovie.Models;
+using SmacoWorld.Sample.BalanceSheet.Models;
 
-namespace MvcMovie.Controllers
+namespace SmacoWorld.Sample.BalanceSheet.Controllers
 {
     public class MoviesController : Controller
     {

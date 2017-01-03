@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace MvcMovie.Models
+namespace SmacoWorld.Sample.BalanceSheet.Models
 {
     public class ExternalLoginConfirmationViewModel
     {

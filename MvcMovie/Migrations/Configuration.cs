@@ -1,19 +1,19 @@
-namespace MvcMovie.Migrations
+namespace SmacoWorld.Sample.BalanceSheet.Migrations
 {
-    using MvcMovie.Models;
+    using SmacoWorld.Sample.BalanceSheet.Models;
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<MvcMovie.Models.MovieDBContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<SmacoWorld.Sample.BalanceSheet.Models.MovieDBContext>
     {
         public Configuration()
         {
           AutomaticMigrationsEnabled = false;
         }
 
-        protected override void Seed(MvcMovie.Models.MovieDBContext context)
+        protected override void Seed(SmacoWorld.Sample.BalanceSheet.Models.MovieDBContext context)
         {
             context.Movies.AddOrUpdate(i => i.Title,
                 new Movie
